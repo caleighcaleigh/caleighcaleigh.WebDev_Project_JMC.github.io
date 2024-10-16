@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f3e7ef;
+}
+
+.Nav_Bar { 
+  font-size: 20px;
+}
+
+.Headings {
+  color: #053328;
+  font-size: 50px;
+  background-color: #eae6dc;
+  border-style: double;           
+  border-color: #f2f2f2;
+  border-width: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#List_Of_Services { 
+  color: #053328;
+  font-size: 20px;
+  background-color: #d79dbc;
+  border-style: double; 
+  border-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.beauty_tips {
+  border-radius: 15px;
+  margin: 10px;
+  width: 250px;
+}
+
+.beauty_tips_gallery { 
+  display: flex;
+  justify-content: center; 
+}
+
+#bookings {
+  font-size: 30px;
+  color: blueviolet;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.profile img {
+  border-radius: 15px;
+  margin-right: 20px;
+  width: 250px;
+  height: 250px;
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile_info {
+  flex: 1;
+}
+
+.photo_album{
+  border-radius: 15px;
+  margin: 10px;
+  width: 250px; 
+}
+.photo_album_info{
+  display: flex;
+  justify-content: center;
+}
