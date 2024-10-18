@@ -1,48 +1,62 @@
+{ 
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background-color: #f3e7ef; 
+  background-color: #f3e7ef;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  background-color: #f5b2c2; 
-  padding: 20px; 
-  border-radius: 10px; 
-  max-width: 1200px; 
-  margin: 20px auto; 
+  background-color: #f5b2c2;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
-.Nav_Bar { 
+.Nav_Bar {
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .header {
-  display: flex;               
-  align-items: center;         
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #eae6dc;
 }
 
 .Headings {
   color: #053328;
   font-size: 50px;
   background-color: #eae6dc;
-  border-style: double;           
+  border-style: double;
   border-color: #f2f2f2;
   border-width: 10px;
   border-radius: 10px;
-  margin: 0;                   
+  margin: 0;
+  padding: 10px 20px;
 }
 
 #logo {
-  height: 100px;              
-  margin-left: 20px;         
+  height: 100px;
+  margin-left: 20px;
+}
 
-#List_Of_Services { 
+#List_Of_Services {
   color: #053328;
   font-size: 20px;
   background-color: #f5b2c2;
-  border-style: double; 
+  border-style: double;
   border-color: #f2f2f2;
   border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .beauty_tips {
@@ -51,9 +65,10 @@ body {
   width: 250px;
 }
 
-.beauty_tips_gallery { 
+.beauty_tips_gallery {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #bookings {
@@ -64,11 +79,11 @@ body {
 .profile {
   display: flex;
   align-items: center;
-  background-color: #f5b2c2; 
-  padding: 20px; 
-  border-radius: 10px; 
-  max-width: 1200px; 
-  margin: 20px auto; 
+  background-color: #f5b2c2;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
 .profile img {
@@ -88,7 +103,7 @@ body {
 .photo_album {
   border-radius: 15px;
   margin: 10px;
-  width: 200px; 
+  width: 200px;
 }
 
 .photo_album_info {
@@ -97,12 +112,12 @@ body {
 }
 
 .map-container {
-  position: relative; 
+  position: relative;
   overflow: hidden;
   max-width: 100%;
   background-color: #e0e0e0;
-  width: 300px; 
-  height: 300px; 
+  width: 300px;
+  height: 300px;
 }
 
 .map-container iframe {
