@@ -10,6 +10,7 @@ body {
   border-radius: 10px; 
   max-width: 1200px; 
   margin: 20px auto; 
+  overflow-wrap: break-word;
 }
 
 .Nav_Bar { 
@@ -53,16 +54,20 @@ body {
 }
 
 .beauty_tips_gallery { 
-  display: flex;
+  display: block;
   justify-content: center; 
 }
 
+/*where is this used?*/
 #bookings {
   font-size: 30px;
   color: black;
 }
 
 .profile {
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
   display: flex;
   align-items: center;
   background-color: #f5b2c2; 
@@ -72,6 +77,7 @@ body {
   margin: 20px auto; 
 }
 
+/*where is this used?*/
 .profile img {
   border-radius: 15px;
   margin-right: 20px;
@@ -93,7 +99,7 @@ body {
 }
 
 .photo_album_info {
-  display: flex;
+  display: block;
   justify-content: center;
 }
 
