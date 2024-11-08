@@ -46,15 +46,16 @@ body {
   border-color: #f2f2f2;
   border-radius: 10px;
 }
-.beauty_tips_gallery { 
-  display: block;
-  justify-content: center; 
-}
 
 .beauty_tips {
   border-radius: 15px;
   margin: 10px;
   width: 250px;
+}
+
+.beauty_tips_gallery { 
+  display: block;
+  justify-content: center; 
 }
 
 /*where is this used?*/
@@ -91,15 +92,15 @@ body {
   flex: 1;
 }
 
-.photo_album_info {
-  display: block;
-  justify-content: center;
-}
-
 .photo_album {
   border-radius: 15px;
   margin: 10px;
   width: 200px; 
+}
+
+.photo_album_info {
+  display: block;
+  justify-content: center;
 }
 
 .map-container {
