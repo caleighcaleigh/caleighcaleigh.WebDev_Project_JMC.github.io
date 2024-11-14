@@ -10,6 +10,7 @@ body {
   border-radius: 10px; 
   max-width: 1200px; 
   margin: 20px auto; 
+  overflow-wrap: break-word;
 }
 
 .Nav_Bar { 
@@ -77,19 +78,22 @@ body {
 }
 
 .beauty_tips_gallery { 
-  display: flex;
+  display: block;
   justify-content: center;
   height: auto; 
   width: 100%;
 }
 
 #bookings {
-  font-size: 30px;
+  font-size: 25px;
   color: black;
+  padding: 0.6rem;
+  background-color: #f5b2c2;
+  border-style: double;
 }
 
 .profile {
-  display: flex;
+  display: block;
   align-items: center;
   background-color: #f5b2c2; 
   padding: 20px; 
@@ -97,6 +101,13 @@ body {
   max-width: 1200px; 
   margin: 20px auto; 
 }
+
+@media only screen and (min-width:768px)
+  {
+    .profile {
+      display: flex;
+    }
+  }
 
 .profile img {
   border-radius: 15px;
@@ -119,7 +130,7 @@ body {
 }
 
 .photo_album_info {
-  display: flex;
+  display: block;
   justify-content: center;
 }
 
@@ -181,4 +192,60 @@ body {
   border-radius: 0.5rem;
   padding: 0.6rem;
   
+}
+
+#fname {
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  background-color: #f3e7ef;
+  width: 20rem;
+  font-weight: bolder;
+
+}
+#lname {
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  background-color: #f3e7ef;
+  width: 20rem;
+  font-weight: bolder;
+
+}
+
+#service {
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  background-color: #f3e7ef;
+  width: 20rem;
+  font-weight: bolder;
+  
+}
+
+#sprequest {
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  background-color: #f3e7ef;
+  width: 20rem;
+  font-weight: bolder;
+}
+
+#submit {
+  border-radius: 0.5rem;
+  font-size: large;
+  border-style: double;
+  padding: 0.6rem;
+  background-color: #f3e7ef;
+  font-weight: bolder;
+
+}
+
+#submit:hover {
+  background-color: #db7f95;
+}
+
+#date {
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  background-color: #f3e7ef;
+  margin: 0.2rem;
+  width: 20rem;
 }
