@@ -7,10 +7,11 @@
     <title>Enchanted Locks</title>
 </head>
 <body>
-        <div class="header">
-            <h1 class="Headings">Enchanted Locks</h1>
-            <img id="logo" src="../media/Logo.png" alt="Enchanted Locks logo" />
-        </div>
+    <div class="header">
+        <h1 class="Headings">Enchanted Locks</h1>
+        <img id="logo" src="../media/Logo.png" alt="Enchanted Locks logo" />
+    </div> 
+
     <div class="container">
         <div class="Nav_Bar"> 
             <a href="../index.html">Home</a>
@@ -19,12 +20,13 @@
         </div>
 
         <h3>Contact Us</h3>
+
         <h3 id="bookings">Bookings</h3>
-        <form>
-            <label for="fname">First name:</label><br>
-            <input for="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input for="text" id="lname" name="lname"><br>
+        <form onsubmit="return validateForm()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
             <label for="service">Service(s) required:</label><br>
             <input for="text" id="service" name="service"><br>
             <label for="Date">Date:</label><br>
@@ -66,6 +68,7 @@
             </iframe>
         </div>
     </div>
+    <script src="../main.js"></script> 
     <footer>
         <p>&copy; 2024 Enchanted Locks. All Rights Reserved.</p>
     </footer>

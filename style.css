@@ -194,7 +194,7 @@ body {
   
 }
 
-#fname {
+#name {
   border-radius: 1.5rem;
   padding: 0.5rem;
   background-color: #f3e7ef;
@@ -202,7 +202,7 @@ body {
   font-weight: bolder;
 
 }
-#lname {
+#email {
   border-radius: 1.5rem;
   padding: 0.5rem;
   background-color: #f3e7ef;
