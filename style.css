@@ -1,39 +1,37 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background-color: #f3e7ef; 
+  background-color: #f3e7ef;  
 }
 
 .container {
-  background-color: #f5b2c2; 
-  padding: 20px; 
-  border-radius: 10px; 
-  max-width: 1200px; 
-  margin: 20px auto; 
+  background-color: #f5b2c2;  
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
   overflow-wrap: break-word;
 }
 
 .Nav_Bar { 
   font-size: 20px;
-  padding:1rem;
+  padding: 1rem;
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
-  
-
 }
+
 .Nav_Bar a {
   background-color: #f0f0f0;
-  padding :  0.5rem  1.2rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 1rem;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.1s,transform 0.2s ;
-
+  transition: background-color 0.1s, transform 0.2s;
 }
 
 .Nav_Bar a:hover {
-  background-color: #db7f95;
+  background-color: #db7f95;  
   transform: scale(1.05);
 }
 
@@ -42,8 +40,8 @@ body {
 }
 
 .header {
-  display: flex;                /* Use flexbox for alignment */
-  align-items: center;         /* Center items vertically */
+  display: flex;                
+  align-items: center;         
 }
 
 .Headings {
@@ -54,12 +52,12 @@ body {
   border-color: #f2f2f2;
   border-width: 10px;
   border-radius: 10px;
-  margin: 0;                   /* Remove default margin */
+  margin: 0;
 }
 
 #logo {
-  height: 100px;              
-  margin-left: 20px;          /* Add some space between the text and logo */
+  height: 100px;
+  margin-left: 20px;
 }
 
 #List_Of_Services { 
@@ -87,27 +85,21 @@ body {
 #bookings {
   font-size: 25px;
   color: black;
-  padding: 0.6rem;
-  background-color: #f5b2c2;
-  border-style: double;
+  width: max-content;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
 }
 
 .profile {
-  display: block;
+  display: flex;
   align-items: center;
-  background-color: #f5b2c2; 
-  padding: 20px; 
-  border-radius: 10px; 
-  max-width: 1200px; 
-  margin: 20px auto; 
+  background-color: #f5b2c2;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
 }
-
-@media only screen and (min-width:768px)
-  {
-    .profile {
-      display: flex;
-    }
-  }
 
 .profile img {
   border-radius: 15px;
@@ -152,8 +144,6 @@ body {
   border: 0;
 }
 
-
-
 .faq-container {
   max-width: 85%;
   margin: 2rem auto;
@@ -169,63 +159,44 @@ body {
 }
 
 #special {
-  font-family: cursive;
-  background-color: #f2f2f2;
+  font-family: 'Gill sans', 'Gill sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #e9e6dc;
   font-size: 1.3rem;
-  border-radius: 0.2rem;
+  border-radius: 1.5rem;
   margin: 2rem auto;
   padding: 2rem;
 }
 
 .testimonials {
   border-radius: 1.5rem;
-  border-color: #ffffff;
   padding: 1.2rem;
   margin: auto;
-  background-color: beige;
+  background-color: #e9e6dc;
   border-style: dashed;
   border-color: black;
-  
 }
+
 #unique {
-  background-color: beige;
+  background-color: #e9e6dc;
   border-radius: 0.5rem;
   padding: 0.6rem;
-  
 }
 
-#fname {
+#fname, #lname, #service, #date, #email, #inquiryType{
   border-radius: 1.5rem;
   padding: 0.5rem;
   background-color: #f3e7ef;
   width: 20rem;
   font-weight: bolder;
-
-}
-#lname {
-  border-radius: 1.5rem;
-  padding: 0.5rem;
-  background-color: #f3e7ef;
-  width: 20rem;
-  font-weight: bolder;
-
-}
-
-#service {
-  border-radius: 1.5rem;
-  padding: 0.5rem;
-  background-color: #f3e7ef;
-  width: 20rem;
-  font-weight: bolder;
-  
 }
 
 #sprequest {
-  border-radius: 1.5rem;
-  padding: 0.5rem;
-  background-color: #f3e7ef;
-  width: 20rem;
-  font-weight: bolder;
+border-radius: 1.5rem;
+padding: 0.5rem;
+background-color: #f3e7ef;
+width: 25rem;
+height: 5rem;
+font-weight: bolder;
 }
 
 #submit {
@@ -235,17 +206,29 @@ body {
   padding: 0.6rem;
   background-color: #f3e7ef;
   font-weight: bolder;
-
 }
 
 #submit:hover {
-  background-color: #db7f95;
+  background-color: #db7f95;  
 }
 
-#date {
-  border-radius: 1.5rem;
-  padding: 0.5rem;
-  background-color: #f3e7ef;
-  margin: 0.2rem;
-  width: 20rem;
+@media only screen and (max-width: 768px) {
+  .Nav_Bar {
+    flex-direction: column;  
+    align-items: center;
+  }
+
+  .profile {
+    flex-direction: column;  
+    align-items: center;
+  }
+
+  .profile img {
+    width: 100%;  
+    height: auto;
+  }
+
+  .faq-container {
+    max-width: 100%;  
+  }
 }
