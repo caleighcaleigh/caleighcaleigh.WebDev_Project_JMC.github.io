@@ -1,44 +1,88 @@
-function validateForm() {
-    // retrieving form values
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    // avoiding blank input
-    if (name === "" || email === "") {
-        //alert("Name and email are required");
-        modalBlankFields.style.display = "block";
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("bookingForm");
 
-        return false;
-    }
-    // validating email format using a simple regular expression
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        modalUnvalidEmail.style.display = "block";
-        return false;
-    }
-    // if all validations pass
-    return true;
-}
+    const fields = {
+        fname: document.getElementById("fname"),
+        lname: document.getElementById("lname"),
+        email: document.getElementById("email"),
+        service: document.getElementById("service"),
+        inquiryType: document.getElementById("inquiryType"),
+        date: document.getElementById("date"),
+    };
 
-var modalBlankFields = document.getElementById("modalBlankFields");
-var modalUnvalidEmail = document.getElementById("modalUnvalidEmail");
+    const errors = {
+        fname: document.getElementById("fnameError"),
+        lname: document.getElementById("lnameError"),
+        email: document.getElementById("emailError"),
+        service: document.getElementById("serviceError"),
+        inquiryType: document.getElementById("inquiryTypeError"),
+        date: document.getElementById("dateError"),
+    };
 
-// Get the <span> element that closes the modal
-var spanBkFd = document.getElementById("closeBkFd");
-var spanUvEm = document.getElementById("closeUvEm");
+    function validateField(field, errorElement, errorMessage, condition) {
+        if (condition(field.value)) {
+            errorElement.textContent = errorMessage;
+            field.style.borderColor = "#f44336";
+            return false;
+        } else {
+            errorElement.textContent = "";
+            field.style.borderColor = "";
+            return true;
+        }
+    }
 
-// When the user clicks on <span> (x), close the modal
-spanBkFd.onclick = function () {
-    modalBlankFields.style.display = "none";
-}
-spanUvEm.onclick = function () {
-    modalUnvalidEmail.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modalBlankFields) {
-        modalBlankFields.style.display = "none";
+    function validateForm() {
+        let isValid = true;
+
+        isValid &= validateField(
+            fields.fname,
+            errors.fname,
+            "First name is required.",
+            value => value.trim() === ""
+        );
+
+        isValid &= validateField(
+            fields.lname,
+            errors.lname,
+            "Last name is required.",
+            value => value.trim() === ""
+        );
+
+        isValid &= validateField(
+            fields.email,
+            errors.email,
+            "Please enter a valid email.",
+            value => !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())
+        );
+
+        isValid &= validateField(
+            fields.service,
+            errors.service,
+            "Please select a service.",
+            value => value === ""
+        );
+
+        isValid &= validateField(
+            fields.inquiryType,
+            errors.inquiryType,
+            "Please select an inquiry type.",
+            value => value === ""
+        );
+
+        isValid &= validateField(
+            fields.date,
+            errors.date,
+            "Please select a date.",
+            value => value === ""
+        );
+
+        return Boolean(isValid);
     }
-    if (event.target == modalUnvalidEmail) {
-        modalUnvalidEmail.style.display = "none";
-    }
-} 
+
+    form.addEventListener("submit", (event) => {
+        const isValid = validateForm();
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+});
