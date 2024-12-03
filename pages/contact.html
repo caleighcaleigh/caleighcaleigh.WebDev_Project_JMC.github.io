@@ -5,69 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <title>Enchanted Locks</title>
+    <style>
+        .error-message {
+            color: #f44336;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-        <div class="header">
-            <h1 class="Headings">Enchanted Locks</h1>
-            <img id="logo" src="../media/Logo.png" alt="Enchanted Locks logo" />
-        </div>
+    <div class="header">
+        <h1 class="Headings">Enchanted Locks</h1>
+        <img id="logo" src="../media/Logo.png" alt="Enchanted Locks logo" />
+    </div>
     <div class="container">
         <div class="Nav_Bar"> 
             <a href="../index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="../faq.html">FAQ's</a>
+            <a href="faq.html">FAQ's</a>
         </div>
 
-        <h3>Contact Us</h3>
-        <h3 id="bookings">Bookings</h3>
-        <form>
-            <label for="fname">First name:</label><br>
-            <input for="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input for="text" id="lname" name="lname"><br>
-            <label for="service">Service(s) required:</label><br>
-            <input for="text" id="service" name="service"><br>
-            <label for="Date">Date:</label><br>
-            <input type="Date" id="date" name="date"><br>
-            <label for="sprequest"> Any Special Requests?</label><br>
-            <input for="text" id="sprequest" name="sprequest"><br><br>
+        <h3 id="bookings">Contact Form</h3>
+
+        <form id="bookingForm" novalidate>
+            <div class="form-group">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname">
+                <span class="error-message" id="fnameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname">
+                <span class="error-message" id="lnameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Service(s) required:</label>
+                <select id="service" name="service">
+                    <option value="">Select a service</option>
+                    <option value="Haircut, Colour, and Styling">Haircut, Colour & Styling</option>
+                    <option value="Haircut & Styling">Haircut & Styling</option>
+                    <option value="Hair Colouring">Hair Colouring</option>
+                    <option value="Blow Dry & Style">Blow Dry & Style</option>
+                    <option value="Professional Styling">Professional Styling</option>
+                </select>
+                <span class="error-message" id="serviceError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="inquiryType">Type of Inquiry:</label>
+                <select id="inquiryType" name="inquiryType">
+                    <option value="">Select an inquiry type</option>
+                    <option value="Booking">Booking</option>
+                    <option value="Product Recommendations">Product Recommendations</option>
+                    <option value="General Questions">General Questions</option>
+                </select>
+                <span class="error-message" id="inquiryTypeError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                <span class="error-message" id="dateError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="sprequest">Additional Details:</label>
+                <input type="text" id="sprequest" name="sprequest">
+                <span class="error-message" id="sprequestError"></span>
+            </div>
+
             <input type="submit" id="submit" value="Submit">
         </form>
-        <p>For further assistance with bookings reach us at
-            <a href="tel:+3551234567">+355 123 4567</a> 
-            or email us at 
-            <a href="mailto:EnchantedLocks.Bookings@gmail.com">EnchantedLocks.Bookings@gmail.com</a>.
-        </p>
-
-        <h3>Customer Service</h3>
-        <p>For any inquiries or assistance, contact our customer service team:</p>
-        <p>
-            Phone: <a href="tel:+089987654321">+089 987 654 321</a><br>
-            Email: <a href="mailto:EnchantedLocks.CustomerService@gmail.com">EnchantedLocks.CustomerService@gmail.com</a>
-        </p>
-
-        <h3>Visit Us</h3>
-        <p>We love to meet our clients in person! Come visit us at:</p>
-        <address>
-            Enchanted Locks<br>
-            123 Dublin Street,<br>
-            Dublin, Ireland<br>
-            <a href="https://www.EnchantedLocks.com">www.EnchantedLocks.com</a>
-        </address>
-
-        <div style="width: 100%; height: 400px;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162445.53249149956!2d-6.410508839354163!3d53.324206557287816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin!5e1!3m2!1sen!2sie!4v1729095851797!5m2!1sen!2sie" 
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
     </div>
     <footer>
         <p>&copy; 2024 Enchanted Locks. All Rights Reserved.</p>
     </footer>
+    <script src="../main.js"></script>
 </body>
 </html>
